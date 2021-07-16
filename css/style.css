@@ -50,6 +50,7 @@ h1 {
 	background-color: white;
 	padding: 1.5rem 1.5rem;
 	border-radius: 10px;
+	box-shadow: 0 8px 1px rgba(182, 108, 108, 0.5);
 }
 
 span.topInfo {
