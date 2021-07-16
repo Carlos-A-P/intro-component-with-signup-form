@@ -76,7 +76,8 @@ span.topInfo {
 	outline: none;
 }
 
-.form-control input[type="text"]::placeholder {
+.form-control input[type="text"]::placeholder,
+.form-control input[type="password"]::placeholder {
 	font-weight: 600;
 }
 
