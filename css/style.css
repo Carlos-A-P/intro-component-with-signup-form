@@ -1,0 +1,204 @@
+:root {
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--dBlue: hsl(249, 10%, 26%);
+	--gBlue: hsl(246, 25%, 77%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	background-color: var(--red);
+	background-image: url(../images/bg-intro-mobile.png);
+}
+
+main {
+	margin: auto;
+	margin-bottom: 3rem;
+	max-width: 400px;
+	text-align: center;
+	padding: 3rem 2rem 0;
+}
+
+.text {
+	color: white;
+	margin-bottom: 3rem;
+}
+
+h1 {
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
+}
+
+.top {
+	color: white;
+	background-color: var(--blue);
+	border-radius: 10px;
+	padding: 0.9rem 3rem;
+	margin-bottom: 1.7rem;
+	box-shadow: 0 8px 1px rgba(182, 108, 108, 0.5);
+}
+
+.form {
+	background-color: white;
+	padding: 1.5rem 1.5rem;
+	border-radius: 10px;
+}
+
+span.topInfo {
+	font-weight: 600;
+}
+
+.form-control {
+	/* making the parent relative will have absolute elements stay inside container */
+	position: relative;
+}
+
+/* inside form control */
+
+.form-control input {
+	width: 100%;
+	height: 50px;
+	border: thin solid var(--gBlue);
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 1rem;
+}
+
+.form-control input:focus {
+	outline: none;
+}
+
+.form-control input[type="text"]::placeholder {
+	font-weight: 600;
+}
+
+.form-control i {
+	/* stack the icons on top of eachother */
+	position: absolute;
+	/* move the icons into the textbox */
+	right: 10px;
+	top: 17px;
+	visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+	color: var(--green);
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: var(--red);
+	visibility: visible;
+}
+
+.form-control small {
+	display: flex;
+	justify-content: flex-end;
+	color: var(--red);
+	font-style: italic;
+	font-size: 12px;
+	margin-top: -1rem;
+	visibility: hidden;
+}
+
+/* changed with javascript */
+.form-control.success input {
+	border-color: var(--green);
+	border-width: medium;
+}
+
+.form-control.error small {
+	margin-bottom: 1rem;
+	visibility: visible;
+}
+
+.form-control.error input {
+	border-color: var(--red);
+	border-width: medium;
+}
+/* end changes from js */
+/* end form-control */
+
+.btn {
+	background-color: var(--green);
+	color: white;
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	text-transform: uppercase;
+}
+
+p.disclosure {
+	color: var(--gBlue);
+	font-size: 12px;
+	margin-top: 1rem;
+}
+
+a.disText {
+	color: var(--red);
+	font-weight: 700;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footer {
+	font-size: 14px;
+	text-align: center;
+}
+.footer a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 750px) {
+	main {
+		padding: 0;
+		max-width: 1200px;
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+	}
+	.wrap {
+		height: 100%;
+		display: grid;
+		grid-template-areas: "text signUp";
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* text section */
+	.text,
+	.signUp {
+		margin: auto;
+	}
+
+	.text h1 {
+		font-size: 2.6rem;
+		max-width: 500px;
+	}
+
+	.text p {
+		margin: 0;
+	}
+
+	.text {
+		text-align: left;
+		margin-left: 1rem;
+	}
+	/* end of text section */
+	/* form section */
+	.signUp {
+		width: 90%;
+		margin: auto;
+	}
+
+	.form {
+		padding: 1.5rem 2rem 3rem;
+	}
+}
